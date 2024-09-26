@@ -1,0 +1,25 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+
+# 花括号前换行的设置设为 Linux 风格，即函数换行，其他情况不换行
+BreakBeforeBraces: Linux
+
+# Tab 对应 4 个空格
+UseTab: Never
+TabWidth: 4
+
+# 代码块缩进 4 个空格
+IndentWidth: 4
+
+# 不允许在一行中使用简短的 if 语句写法
+AllowShortIfStatementsOnASingleLine: false
+
+# 每行代码最大字符数不做硬性要求，但建议控制在 120 以内
+ColumnLimit: 0
+
+# 连续的宏定义时，对齐所有宏定义
+AlignConsecutiveMacros: AcrossComments
+
+# 访问权限修饰符的位置为 -2，即在类型和名称之间
+AccessModifierOffset: -2
