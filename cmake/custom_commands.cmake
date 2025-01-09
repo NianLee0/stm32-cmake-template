@@ -2,8 +2,16 @@
 set(OPENOCD_CONFIG openocd -f interface/cmsis-dap.cfg -f target/stm32xxx.cfg -c init)
 set(OPENOCD_RTT_CONFIG openocd -f ${CMAKE_SOURCE_DIR}/openocd/xxxx.cfg)
 # 必须修改为自己的配置文件路径 ---------------------------------------↑ example: h7_rtt.cfg
+set(BUILD_DSP ON) # 是否编译DSP库
 
 ################################# 下面代码无需修改 #################################
+
+if(BUILD_DSP)
+    set(CMSISCORE "${CMAKE_SOURCE_DIR}/Drivers/CMSIS")
+    set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/Library/CMSIS_DSP/Lib")
+    add_subdirectory(${CMAKE_SOURCE_DIR}/Library/CMSIS_DSP/Source cmsis_dsp)
+    target_link_libraries(${CMAKE_PROJECT_NAME} ${CMAKE_SOURCE_DIR}/Library/CMSIS_DSP/Lib/libCMSISDSP.a)
+endif()
 
 # elf2hex and elf2bin
 add_custom_command(

@@ -28,7 +28,9 @@ add_source_files(${CMAKE_SOURCE_DIR}/path)
 2. 模板中需要修改的部分已经写成了不修改会报错的形式，如果遇到报错请首先检查是不是有地方没有修改
 3. `Core`​，`Driver`​等cubemx自动生成的文件夹中的文件无需使用模板提供的函数手动添加，项目生成时已经自动添加
 4. 模板中有`download`​，`erase`​，`reset`​，`rtt`​的快捷指令，使用`cmake tools`​插件可以方便调用
-5. 模板中部分cmake配置根据湖南大学跃鹿战队[powerful_framework](https://gitee.com/hnuyuelurm/powerful_framework)项目修改而来
+5. `stm32cubemx`中的cmsis-dsp库函数不完整，cmake配置文件中已经给出编译选项，如果需要使用请根据模板中提供的源码自行编译
+6. `.clangd`中的编译器路径要根据自己情况修改
+7. 模板中部分cmake配置根据湖南大学跃鹿战队[powerful_framework](https://gitee.com/hnuyuelurm/powerful_framework)项目修改而来
 
 ‍
 

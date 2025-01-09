@@ -1,0 +1,21 @@
+CompileFlags:
+  Add:
+    - "-Iyour_compiler_path\\arm-none-eabi\\include"
+  CompilationDatabase: ./build/debug
+
+Index:
+  Background: Build
+
+Completion:
+  AllScopes: true
+
+#Diagnostics:
+  #ClangTidy:
+    #Add: ["performance-*","bugprone-*","misc-*","google-*","modernize-*","readability-*","portability-*"]
+    #Remove: ["performance-no-int-to-ptr","readability-magic-numbers","readability-function-cognitive-complexity"]
+
+InlayHints:              # 代码提示设置部分
+  Enabled: true         # 启用代码提示
+  ParameterNames: true  # 显示参数名称提示
+  DeducedTypes: true     # 显示推断类型提示
+  Designators: true      # 显示设计器提示
